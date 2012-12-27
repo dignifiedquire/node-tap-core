@@ -1,21 +1,19 @@
 {
-  "name": "tap",
+  "name": "tap-core",
   "version": "0.3.3",
   "author": "Isaac Z. Schlueter <i@izs.me> (http://blog.izs.me)",
   "description": "A Test-Anything-Protocol library",
-  "bin": "bin/tap.js",
   "main": "lib/main.js",
   "dependencies": {
     "inherits": "*",
     "yamlish": "*",
-    "slide": "*",
-    "runforcover": "~0.0.2",
-    "nopt": "~2",
-    "mkdirp": "~0.3",
     "difflet": "~0.2.0",
     "deep-equal": "~0.0.0",
     "buffer-equal": "~0.0.0"
   },
+  "devDependencies": {
+    "tap": "~0.3.3"
+  },  
   "bundledDependencies": [
     "inherits",
     "tap-consumer",
@@ -36,6 +34,6 @@
   },
   "repository": "git://github.com/isaacs/node-tap.git",
   "scripts": {
-    "test": "bin/tap.js test/*.js"
+    "test": "node_modules/.bin/tap test/*.js"
   }
 }
